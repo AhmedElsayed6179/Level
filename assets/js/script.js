@@ -13,27 +13,6 @@ $(function () {
     infinite: true,
     pauseOnHover: true,
   });
-
-  function videoToggle() {
-    video = $(".level-video").get(0);
-
-    if (video.paused) {
-      video.play();
-      $(".video-control-play").hide();
-      $(".video-control-pause").show();
-    } else {
-      video.pause();
-      $(".video-control-play").show();
-      $(".video-control-pause").hide();
-    }
-  }
-
-  $(".video-control-play").click(function () {
-    videoToggle();
-  });
-  $(".video-control-pause").click(function () {
-    videoToggle();
-  });
 });
 
 const links = document.querySelectorAll(".star-places-body a");
@@ -136,3 +115,4 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   alert("Internet error. Please check your connection and try again.");
 });
+
