@@ -69,16 +69,17 @@ const formroom = checkBtn.closest("form");
 checkBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  // نجمع كل الحقول داخل الفورم (input و select)
   const inputs = formroom.querySelectorAll("input, select");
   let allFilled = true;
 
   inputs.forEach((field) => {
+    const val = field.value.trim();
+
     if (
-      field.value.trim() === "" ||
-      field.value === "Rooms" ||
-      field.value === "Adults" ||
-      field.value === "Children Rooms"
+      val === "" ||
+      val === "Rooms" ||
+      val === "Adults" ||
+      val === "Children Rooms"
     ) {
       allFilled = false;
     }
@@ -115,4 +116,5 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   alert("Internet error. Please check your connection and try again.");
 });
+
 
